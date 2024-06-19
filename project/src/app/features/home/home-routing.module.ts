@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeBaseComponent } from './pages/home-base';
 import { ThankYouComponent } from '../components';
+import { ExternalRedirectGuard } from '../../core/guards';
 
 const routes: Routes = [
   { path: '', component: HomeBaseComponent },
@@ -9,11 +10,11 @@ const routes: Routes = [
     path: 'thank-you',
     component: ThankYouComponent,
   },
-  // {
-  //   path: 'external-router',
-  //   canActivate: [ExternalUrlRedirectGuard],
-  //   component: ExternalRouterComponent,
-  // }
+  {
+    path: 'external-router',
+    canActivate: [ExternalRedirectGuard],
+    component: ThankYouComponent,
+  }
 ];
 
 @NgModule({
