@@ -1,11 +1,15 @@
 import { Component, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-home-base',
-  templateUrl: './home-base.component.html',
+  selector: 'app-thank-you',
+  templateUrl: './thank-you.component.html',
+  standalone: true,
+  imports: [CommonModule, RouterModule],
 })
-export class HomeBaseComponent implements OnDestroy{
+export class ThankYouComponent implements OnDestroy{
   /**
    * Component destroyed stream
    */
